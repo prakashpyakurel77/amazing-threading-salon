@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Amazing Eyebrows Threading & Waxing Inc</title>
+  <title>New Amazing Eyebrows Threading & Waxing Inc</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Georgia', serif; color: #222; background: #fff; }
@@ -11,25 +11,43 @@
     nav {
       display: flex; justify-content: space-between; align-items: center;
       padding: 1.2rem 3rem; border-bottom: 1px solid #eee; flex-wrap: wrap; gap: 1rem;
+      background: #fff;
     }
     nav .logo { font-size: 1rem; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; max-width: 320px; line-height: 1.4; }
     nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
     nav ul a { text-decoration: none; color: #222; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; }
     nav ul a:hover { color: #888; }
 
+    /* HERO */
     #home {
+      position: relative;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align: center; padding: 6rem 2rem; background: #fafafa; border-bottom: 1px solid #eee;
+      text-align: center; padding: 8rem 2rem;
+      background-image: url('eye.jpg');
+      background-size: cover; background-position: center;
+      border-bottom: 1px solid #eee;
     }
-    #home h1 { font-size: 2.5rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; line-height: 1.3; }
-    #home p { font-size: 1.1rem; color: #666; margin-bottom: 2rem; max-width: 500px; line-height: 1.7; }
+    #home::before {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    #home h1, #home p, #home a { position: relative; z-index: 1; }
+    #home h1 { font-size: 2.5rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; line-height: 1.3; color: #fff; }
+    #home p { font-size: 1.1rem; color: #eee; margin-bottom: 2rem; max-width: 500px; line-height: 1.7; }
 
     .btn {
-      display: inline-block; padding: 0.75rem 2rem; border: 1px solid #222;
-      text-decoration: none; color: #222; font-size: 0.85rem; letter-spacing: 1px;
-      text-transform: uppercase; transition: all 0.2s;
+      display: inline-block; padding: 0.75rem 2rem; border: 1px solid #fff;
+      text-decoration: none; color: #fff; font-size: 0.85rem; letter-spacing: 1px;
+      text-transform: uppercase; transition: all 0.2s; position: relative; z-index: 1;
     }
-    .btn:hover { background: #222; color: #fff; }
+    .btn:hover { background: #fff; color: #222; }
+
+    /* GALLERY */
+    #gallery {
+      display: grid; grid-template-columns: 1fr 1fr;
+      max-height: 400px; overflow: hidden;
+    }
+    #gallery img { width: 100%; height: 400px; object-fit: cover; display: block; }
 
     /* SERVICES */
     #services { padding: 5rem 3rem; background: #fff; border-bottom: 1px solid #eee; }
@@ -59,9 +77,17 @@
     .special-card .big-price { font-size: 1.8rem; font-weight: bold; margin: 0.5rem 0; }
 
     /* ABOUT */
-    #about { background: #fafafa; padding: 5rem 3rem; border-bottom: 1px solid #eee; }
-    #about h2 { font-size: 1.5rem; letter-spacing: 2px; text-transform: uppercase; text-align: center; margin-bottom: 1.5rem; }
-    #about p { max-width: 650px; margin: 0 auto; text-align: center; color: #555; line-height: 1.9; }
+    #about {
+      display: grid; grid-template-columns: 1fr 1fr;
+      min-height: 350px; border-bottom: 1px solid #eee;
+    }
+    #about img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    #about .about-text {
+      background: #fafafa; padding: 4rem 3rem;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    #about .about-text h2 { font-size: 1.5rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; }
+    #about .about-text p { color: #555; line-height: 1.9; font-size: 0.95rem; }
 
     /* CONTACT */
     #contact { padding: 5rem 3rem; text-align: center; }
@@ -69,12 +95,19 @@
     .contact-info { display: flex; flex-direction: column; gap: 0.75rem; align-items: center; color: #555; margin-bottom: 2rem; font-size: 0.95rem; }
 
     footer { text-align: center; padding: 2rem; border-top: 1px solid #eee; font-size: 0.8rem; color: #aaa; }
+
+    @media (max-width: 600px) {
+      #about { grid-template-columns: 1fr; }
+      #gallery { grid-template-columns: 1fr; }
+      nav { padding: 1rem 1.5rem; }
+      #services { padding: 3rem 1.5rem; }
+    }
   </style>
 </head>
 <body>
 
   <nav>
-    <div class="logo"> New Amazing Eyebrows Threading & Waxing Inc</div>
+    <div class="logo">New Amazing Eyebrows Threading & Waxing Inc</div>
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#services">Services</a></li>
@@ -83,17 +116,24 @@
     </ul>
   </nav>
 
+  <!-- HERO with eye.jpg background -->
   <section id="home">
-    <h1> New Amazing Eyebrows<br>Threading & Waxing</h1>
+    <h1>New Amazing Eyebrows<br>Threading & Waxing</h1>
     <p>Professional threading, waxing, facials, and more in Fresh Meadows, NY. Walk in or call to book today.</p>
     <a href="tel:7189692092" class="btn">Call (718) 969-2092</a>
   </section>
 
+  <!-- PHOTO GALLERY -->
+  <div id="gallery">
+    <img src="eyebrows.jpg" alt="Eyebrow threading before and after" />
+    <img src="facial.jpg" alt="Facial treatment" />
+  </div>
+
+  <!-- SERVICES -->
   <div id="services">
     <h2>Our Services</h2>
     <div class="services-grid">
 
-      <!-- Threading or Waxing -->
       <div class="service-card">
         <h3>Threading or Waxing</h3>
         <div class="service-item"><span>Eyebrows</span><span class="price">$6.00</span></div>
@@ -104,7 +144,6 @@
         <div class="service-item"><span>Neck</span><span class="price">$8.00</span></div>
       </div>
 
-      <!-- Waxing -->
       <div class="service-card">
         <h3>Waxing</h3>
         <div class="service-item"><span>Full Legs</span><span class="price">$30.00</span></div>
@@ -115,7 +154,6 @@
         <div class="service-item"><span>Back</span><span class="price">$25.00</span></div>
       </div>
 
-      <!-- Facials -->
       <div class="service-card">
         <h3>Facials</h3>
         <div class="service-item"><span>Clear Complexion</span><span class="price">$12.00</span></div>
@@ -128,7 +166,6 @@
         <div class="service-item"><span>Seaweed Facial</span><span class="price">$70.00</span></div>
       </div>
 
-      <!-- Massage & Other -->
       <div class="service-card">
         <h3>Massage & Other</h3>
         <div class="service-item"><span>Massage</span><span class="price">$1/min</span></div>
@@ -137,7 +174,6 @@
 
     </div>
 
-    <!-- Special -->
     <div style="max-width: 960px; margin: 2rem auto 0;">
       <div class="special-card">
         <h3>⭐ Special</h3>
@@ -147,13 +183,18 @@
     </div>
   </div>
 
+  <!-- ABOUT with facial.jpg -->
   <div id="about">
-    <h2>About Us</h2>
-    <p> New Amazing Eyebrows Threading & Waxing Inc is your trusted beauty salon in Fresh Meadows, NY.
-    We specialize in threading, waxing, facials, massage, and henna tattoos — all at affordable prices.
-    Our experienced team is dedicated to making every client look and feel their absolute best.</p>
+    <img src="facial.jpg" alt="Facial treatment at our salon" />
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>New Amazing Eyebrows Threading & Waxing Inc is your trusted beauty salon in Fresh Meadows, NY.
+      We specialize in threading, waxing, facials, massage, and henna tattoos — all at affordable prices.
+      Our experienced team is dedicated to making every client look and feel their absolute best.</p>
+    </div>
   </div>
 
+  <!-- CONTACT -->
   <section id="contact">
     <h2>Contact & Hours</h2>
     <div class="contact-info">
@@ -161,10 +202,10 @@
       <span>📞 (718) 969-2092</span>
       <span>Mon – Sun: 10:00 AM – 7:30 PM</span>
     </div>
-    <a href="tel:7189692092" class="btn">Call (718) 969-2092</a>
+    <a href="tel:7189692092" class="btn" style="border-color:#222; color:#222;">Call (718) 969-2092</a>
   </section>
 
-  <footer>&copy; 2026 Amazing Eyebrows Threading & Waxing Inc. All rights reserved.</footer>
+  <footer>&copy; 2026 New Amazing Eyebrows Threading & Waxing Inc. All rights reserved.</footer>
 
 </body>
 </html>
