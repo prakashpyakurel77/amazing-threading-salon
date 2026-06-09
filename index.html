@@ -1,0 +1,170 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amazing Eyebrows Threading & Waxing Inc</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Georgia', serif; color: #222; background: #fff; }
+
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.2rem 3rem; border-bottom: 1px solid #eee; flex-wrap: wrap; gap: 1rem;
+    }
+    nav .logo { font-size: 1rem; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; max-width: 320px; line-height: 1.4; }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    nav ul a { text-decoration: none; color: #222; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; }
+    nav ul a:hover { color: #888; }
+
+    #home {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 6rem 2rem; background: #fafafa; border-bottom: 1px solid #eee;
+    }
+    #home h1 { font-size: 2.5rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; line-height: 1.3; }
+    #home p { font-size: 1.1rem; color: #666; margin-bottom: 2rem; max-width: 500px; line-height: 1.7; }
+
+    .btn {
+      display: inline-block; padding: 0.75rem 2rem; border: 1px solid #222;
+      text-decoration: none; color: #222; font-size: 0.85rem; letter-spacing: 1px;
+      text-transform: uppercase; transition: all 0.2s;
+    }
+    .btn:hover { background: #222; color: #fff; }
+
+    /* SERVICES */
+    #services { padding: 5rem 3rem; background: #fff; border-bottom: 1px solid #eee; }
+    #services h2 { font-size: 1.5rem; letter-spacing: 2px; text-transform: uppercase; text-align: center; margin-bottom: 3rem; }
+
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem; max-width: 960px; margin: 0 auto;
+    }
+    .service-card { border: 1px solid #eee; padding: 2rem 1.5rem; }
+    .service-card h3 {
+      font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase;
+      margin-bottom: 1.2rem; padding-bottom: 0.75rem; border-bottom: 1px solid #eee; text-align: center;
+    }
+    .service-item {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0.4rem 0; font-size: 0.9rem; color: #444; border-bottom: 1px dotted #f0f0f0;
+    }
+    .service-item:last-child { border-bottom: none; }
+    .service-item .price { font-weight: bold; color: #222; white-space: nowrap; margin-left: 1rem; }
+
+    .special-card {
+      border: 1px solid #222; padding: 2rem 1.5rem; text-align: center; background: #fafafa;
+    }
+    .special-card h3 { font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; }
+    .special-card p { font-size: 0.95rem; color: #444; line-height: 1.7; }
+    .special-card .big-price { font-size: 1.8rem; font-weight: bold; margin: 0.5rem 0; }
+
+    /* ABOUT */
+    #about { background: #fafafa; padding: 5rem 3rem; border-bottom: 1px solid #eee; }
+    #about h2 { font-size: 1.5rem; letter-spacing: 2px; text-transform: uppercase; text-align: center; margin-bottom: 1.5rem; }
+    #about p { max-width: 650px; margin: 0 auto; text-align: center; color: #555; line-height: 1.9; }
+
+    /* CONTACT */
+    #contact { padding: 5rem 3rem; text-align: center; }
+    #contact h2 { font-size: 1.5rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2.5rem; }
+    .contact-info { display: flex; flex-direction: column; gap: 0.75rem; align-items: center; color: #555; margin-bottom: 2rem; font-size: 0.95rem; }
+
+    footer { text-align: center; padding: 2rem; border-top: 1px solid #eee; font-size: 0.8rem; color: #aaa; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Amazing Eyebrows Threading & Waxing Inc</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <h1>Amazing Eyebrows<br>Threading & Waxing</h1>
+    <p>Professional threading, waxing, facials, and more in Fresh Meadows, NY. Walk in or call to book today.</p>
+    <a href="tel:7189692092" class="btn">Call (718) 969-2092</a>
+  </section>
+
+  <div id="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+
+      <!-- Threading or Waxing -->
+      <div class="service-card">
+        <h3>Threading or Waxing</h3>
+        <div class="service-item"><span>Eyebrows</span><span class="price">$6.00</span></div>
+        <div class="service-item"><span>Upper Lips</span><span class="price">$4.00</span></div>
+        <div class="service-item"><span>Full Face</span><span class="price">$25.00</span></div>
+        <div class="service-item"><span>Sides</span><span class="price">$8.00</span></div>
+        <div class="service-item"><span>Chin</span><span class="price">$5.00</span></div>
+        <div class="service-item"><span>Neck</span><span class="price">$8.00</span></div>
+      </div>
+
+      <!-- Waxing -->
+      <div class="service-card">
+        <h3>Waxing</h3>
+        <div class="service-item"><span>Full Legs</span><span class="price">$30.00</span></div>
+        <div class="service-item"><span>Full Arms</span><span class="price">$20.00</span></div>
+        <div class="service-item"><span>Under Arms</span><span class="price">$10.00</span></div>
+        <div class="service-item"><span>Brazilian</span><span class="price">$35.00</span></div>
+        <div class="service-item"><span>Stomach</span><span class="price">$20.00</span></div>
+        <div class="service-item"><span>Back</span><span class="price">$25.00</span></div>
+      </div>
+
+      <!-- Facials -->
+      <div class="service-card">
+        <h3>Facials</h3>
+        <div class="service-item"><span>Clear Complexion</span><span class="price">$12.00</span></div>
+        <div class="service-item"><span>Face Polish</span><span class="price">$25.00</span></div>
+        <div class="service-item"><span>Mini Facial</span><span class="price">$35.00</span></div>
+        <div class="service-item"><span>Herbal Facial</span><span class="price">$40.00</span></div>
+        <div class="service-item"><span>Acne Facial</span><span class="price">$50.00</span></div>
+        <div class="service-item"><span>Gold Facial</span><span class="price">$60.00</span></div>
+        <div class="service-item"><span>Diamond Facial</span><span class="price">$65.00</span></div>
+        <div class="service-item"><span>Seaweed Facial</span><span class="price">$70.00</span></div>
+      </div>
+
+      <!-- Massage & Other -->
+      <div class="service-card">
+        <h3>Massage & Other</h3>
+        <div class="service-item"><span>Massage</span><span class="price">$1/min</span></div>
+        <div class="service-item"><span>Henna Tattoo</span><span class="price">$7.00</span></div>
+      </div>
+
+    </div>
+
+    <!-- Special -->
+    <div style="max-width: 960px; margin: 2rem auto 0;">
+      <div class="special-card">
+        <h3>⭐ Special</h3>
+        <p>Full Body Waxing<br>(Full Legs, Full Arms & Underarms)</p>
+        <div class="big-price">$50</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="about">
+    <h2>About Us</h2>
+    <p>Amazing Eyebrows Threading & Waxing Inc is your trusted beauty salon in Fresh Meadows, NY.
+    We specialize in threading, waxing, facials, massage, and henna tattoos — all at affordable prices.
+    Our experienced team is dedicated to making every client look and feel their absolute best.</p>
+  </div>
+
+  <section id="contact">
+    <h2>Contact & Hours</h2>
+    <div class="contact-info">
+      <span>📍 79-06 Parsons Blvd, Flushing, NY 11366</span>
+      <span>📞 (718) 969-2092</span>
+      <span>Mon – Sun: 10:00 AM – 7:30 PM</span>
+    </div>
+    <a href="tel:7189692092" class="btn">Call (718) 969-2092</a>
+  </section>
+
+  <footer>&copy; 2026 Amazing Eyebrows Threading & Waxing Inc. All rights reserved.</footer>
+
+</body>
+</html>
